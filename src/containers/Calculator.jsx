@@ -5,7 +5,7 @@ import {Chart, ShareDialog, Table} from "../components";
 import {useCalculation, useFilters, useShare} from "../utils";
 
 const Calculator = ({value, index, filterKey}) => {
-    const {inputFilters, filters, saveFilters} = useFilters();
+    const {inputFilters, filters, saveFilters} = useFilters(filterKey);
     const {
         onCloseShareModal,
         showShareDialog,
