@@ -1,43 +1,29 @@
 import React from "react";
-import { Container, Box } from "@material-ui/core";
-import { useFilters, useTitle, useShare, useCalculation } from "../utils";
-import { Title, Filter, Footer } from "../containers";
-import { ShareDialog, Chart, Table } from "../components";
+import {Container, Box} from "@material-ui/core";
+import {useTitle, useTabs} from "../utils";
+import {Title, Footer, IslandTabs, Calculator} from "../containers";
+
 
 const App = () => {
-  useTitle();
-  const { inputFilters, filters, saveFilters } = useFilters();
-  const {
-    onCloseShareModal,
-    showShareDialog,
-    openShareDialog,
-    shareFilters,
-  } = useShare(filters);
+    useTitle();
+    const {tabs, addTab, deleteTab, value, handleTabChange} = useTabs();
+    const panelMarkup = tabs.map((tab, index) => (
+        <Calculator filterKey={tab.key} key={tab.key} value={value} index={index}/>
+    ));
 
-  const result = useCalculation({ filters });
-
-  return (
-    <>
-      <Container maxWidth="md">
-        <Title />
-        <Box mx={[-1.5, 0]}>
-          <Filter
-            filters={inputFilters}
-            onChange={saveFilters}
-            openShareDialog={openShareDialog}
-          />
-          <Chart {...result} />
-          <Table {...result} />
-          <Footer />
-        </Box>
-      </Container>
-      <ShareDialog
-        open={showShareDialog}
-        filters={shareFilters}
-        onClose={onCloseShareModal}
-      />
-    </>
-  );
+    return (
+        <>
+            <Container maxWidth="md">
+                <Title/>
+                <Box mx={[-1.5, 0]}>
+                    <IslandTabs value={value} tabs={tabs} onAdd={addTab} onDelete={deleteTab}
+                                onChange={handleTabChange}/>
+                    {panelMarkup}
+                    <Footer/>
+                </Box>
+            </Container>
+        </>
+    );
 };
 
 export default App;
