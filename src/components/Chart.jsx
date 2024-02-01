@@ -3,7 +3,7 @@ import { arrayOf, number } from "prop-types";
 import Chart from "chart.js";
 import zip from "lodash.zip";
 import merge from "lodash.merge";
-import { Box } from "@material-ui/core";
+import { Box } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 Chart.defaults.defaultFontFamily = "Arial Rounded MT Bold";
@@ -222,7 +222,7 @@ const ChartComponent = ({
     <Box
       p={[0.5, 1, 2]}
       mt={2}
-      borderRadius={16}
+      borderRadius={4}
       bgcolor="bkgs.chart"
       width={1}
       height={400}

@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Box} from "@material-ui/core";
+import {Container, Box} from "@mui/material";
 import {useTitle, useTabs} from "../utils";
 import {Title, Footer, IslandTabs, Calculator} from "../containers";
 

@@ -1,5 +1,5 @@
 import React, { useMemo, Fragment } from "react";
-import { Box, Typography, Link as MaterialLink } from "@material-ui/core";
+import { Box, Typography, Link as MaterialLink } from "@mui/material";
 import { Trans } from "react-i18next";
 import Localizer from "./Localizer";
 import { string, node } from "prop-types";
@@ -31,7 +31,7 @@ const Footer = () => {
         py={2}
         color="bkgs.mainAlt"
         bgcolor="bkgs.contentAlt"
-        borderRadius={16}
+        borderRadius={4}
       >
         <Box my={2}>
           <Typography variant="h5">{t("Usage")}</Typography>

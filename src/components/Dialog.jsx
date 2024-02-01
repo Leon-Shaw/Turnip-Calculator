@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { func, bool, arrayOf, number, any } from "prop-types";
 import {
-  makeStyles,
   Dialog,
   DialogActions,
   DialogContent,
@@ -11,7 +10,8 @@ import {
   Typography,
   Box,
   LinearProgress,
-} from "@material-ui/core";
+} from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { useTranslation } from "react-i18next";
 import { useCallback } from "react";
 import { toHash } from "../utils/useShare";
@@ -163,7 +163,7 @@ const ShareDialog = ({ open, filters, onClose, ...props }) => {
       {open && (
         <Box mx={[-2.5, 0]}>
           <Box
-            borderRadius={16}
+            borderRadius={4}
             bgcolor="bkgs.chart"
             overflow="hidden"
             maxWidth="600px"

@@ -1,5 +1,6 @@
 import React from "react";
-import { Button as MaterialButton, makeStyles } from "@material-ui/core";
+import { Button as MaterialButton } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { useTranslation } from "react-i18next";
 import cx from "classnames";
 import { string } from "prop-types";

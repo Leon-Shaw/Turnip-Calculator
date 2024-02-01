@@ -5,8 +5,8 @@ import {
   FormGroup,
   InputAdornment,
   Box,
-  makeStyles,
-} from "@material-ui/core";
+} from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { useInterval } from "react-use";
 import { useTranslation } from "react-i18next";
 import { ClearButton, ClearDataDialog, Button } from "../components";
@@ -111,7 +111,7 @@ const Filter = ({ filters, onChange, openShareDialog }) => {
         }}
       />
       <Box
-        borderRadius={16}
+        borderRadius={4}
         bgcolor="primary.light"
         display="flex"
         flexDirection="column"
@@ -121,7 +121,7 @@ const Filter = ({ filters, onChange, openShareDialog }) => {
             m={2}
             p={2}
             mb={-1}
-            borderRadius={16}
+            borderRadius={4}
             bgcolor="bkgs.mainAlt"
             display="flex"
           >
@@ -149,7 +149,7 @@ const Filter = ({ filters, onChange, openShareDialog }) => {
                         <Box
                           p={2}
                           bgcolor="bkgs.mainAlt"
-                          borderRadius={16}
+                          borderRadius={4}
                           display="flex"
                           flexDirection="column"
                           justifyContent="space-between"

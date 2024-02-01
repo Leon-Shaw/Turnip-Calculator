@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { node } from "prop-types";
-import { CssBaseline, ThemeProvider } from "@material-ui/core";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
 import { useTheme } from "../utils";

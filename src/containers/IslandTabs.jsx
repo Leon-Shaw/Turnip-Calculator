@@ -1,6 +1,7 @@
 import React from "react";
-import {makeStyles, Tab, Tabs} from "@material-ui/core";
-import {Add, Close} from "@material-ui/icons";
+import {Tab, Tabs} from "@mui/material";
+import {makeStyles} from "@mui/styles";
+import {Add, Close} from "@mui/icons-material";
 import {useTranslation} from "react-i18next";
 import PropTypes from "prop-types";
 

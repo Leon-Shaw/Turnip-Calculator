@@ -1,5 +1,6 @@
 import React, { useMemo, useEffect } from "react";
-import { Box, Breadcrumbs, Link, makeStyles } from "@material-ui/core";
+import { Box, Breadcrumbs, Link } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { useTranslation } from "react-i18next";
 import { useLocalStorage } from "react-use";
 import { list } from "../locales";
